@@ -12,23 +12,47 @@
 			body {
 				padding: 0px;
 				margin: 0px;
-		}
+			}
+			
+			p, li {
+				color: red;
+				width: 500px;
+				border: 1px solid green;
+				margin: 10px;
+				padding: 10px;
+			}
+			
+			#game-title {
+				color: magenta;
+			}
+			
+			.instruction-item {
+				color: black;
+			}
+			
+			li[name="instruction-1"] {
+				color: orange;
+			}
+			
+			li[name="instruction-1"]:hover {
+				background-color: lightgrey;
+			}
 		</style>
 		<script></script>
 	</head>
 <body>
-		<h2 style="color: blue;">Guess the number</h2>
+		<h2 class="game-title">Guess the number</h2>
 		<p>
 			Instructions:
 		</p>
 		<ol>
-				<li>
+			<li class="instruction-item" name="instruction-1">
 				Enter your guess in input box
 			</li>
-			<li>
+			<li class="instruction-item" name="instruction-2">
 				Click on submit button
 			</li>
-			<li>
+			<li class="instruction-item"  name="instruction-3">
 				Computer will provide hint
 			</li>
 		</ol>
