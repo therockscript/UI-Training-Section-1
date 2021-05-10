@@ -12,6 +12,7 @@
 			body {
 				padding: 0px;
 				margin: 0px;
+				font-size: 20px;
 			}
 			
 			p, li {
@@ -20,6 +21,7 @@
 				border: 1px solid green;
 				margin: 10px;
 				padding: 10px;
+				font-size: 0.5em
 			}
 			
 			#game-title {
@@ -37,10 +39,34 @@
 			li[name="instruction-1"]:hover {
 				background-color: lightgrey;
 			}
+			
+			.box {
+			  border: 1px solid #333333;
+			  width: 50vw;
+			  height: 25vh;
+			  /* 
+			  overflow-y: scroll;
+			  overflow-x: hidden;
+			  */
+			  overflow: auto;
+			}
+			
+			.sub-box {
+				color: blue;
+				width: 100%;
+				border: 1px solid blue;
+			}
 		</style>
 		<script></script>
 	</head>
 <body>
+		<div class="box">
+			This box has a height and a width. This means that if there is too much content to be displayed within the assigned height, there will be an overflow situation. If overflow is set to hidden then any overflow will not be visible.
+			<div class="sub-box">
+				this is sub box content
+			</div>
+		</div>
+		
 		<h2 class="game-title">Guess the number</h2>
 		<p>
 			Instructions:
