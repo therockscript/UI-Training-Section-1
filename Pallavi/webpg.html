@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Demo Webpage</title>
+	<title>Practice Web Page</title>
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<style>
+	 li,label{
+         font-family:Sans-serif;
+	   }
+
+	 h1[name="heading1"]:hover {
+         color: #cc0000;
+	   }  
+
+	 body{
+           background-color: #808080;
+	     }
+
+	 .card[name="card11"]:hover{
+	 	border: 7px solid #ffa366;
+        background-color: #E7E9EB;
+	     }    
+</style>
 </head>
-<body style="background: #808080">
+<body>
 	<br><br><br>
 	<!-- <center><h2>Number Game...</h2></center> -->
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3"></div>
 		 <div class="col-md-6">
-      <div class="card">
+      <div class="card" name="card11">
         <div class="card-body">
         	<div style="float:left;">
         	   <img src="download.jpg" style="height: 90px; width: 80px;">
         	</div>
-            <center><h1 style="color: red;">Guess the Number</h1></center>
+            <center><h1 name="heading1">Guess the Number</h1></center>
            <div style="margin-top: 60px;">
 		  <p>
 		     <b>Instructions:</b>  
 		     <ol>
-		       <li style = "font-family:Sans-serif;">Enter Your Guess in input Box</li>
-		       <li style = "font-family:Sans-serif;">Click On Submit Button</li>
-		       <li style = "font-family:Sans-serif;">Computer Will Provide Hint</li>
+		       <li>Enter Your Guess in input Box</li>
+		       <li>Click On Submit Button</li>
+		       <li>Computer Will Provide Hint</li>
 		    </ol>
 		 </p>
 		 </div>
 		    <div>
-		      <label style = "font-family:Sans-serif;">Enter Your Guess:</label>
+		      <label>Enter Your Guess:</label>
 		      <input type="text">
 		      <button class="btn btn-danger">Submit</button>
 		    </div>
