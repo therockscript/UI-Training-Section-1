@@ -9,7 +9,15 @@
 <head>
 	<title>HTML forms</title>
 	<style>
+		div {
+			margin: 10px;
+		}
 		
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
 	</style>
 	<script>
 		function onFormSubmit(e) {
@@ -21,10 +29,14 @@
 <body>
 	<h1>Registration</h1>
 	<form onSubmit="onFormSubmit(event)">
-		<label>First Name: </label>
-		<input type="text" name="first_name" value="" required />
-		<label>Last Name: </label>
-		<input type="text" name="last_name" value="" required />
+		<div>
+			<label>First Name: </label>
+			<input type="text" name="first_name" value="" required />
+		</div>
+		<div>
+			<label>Last Name: </label>
+			<input type="text" name="last_name" value="" required />
+		</div>
 		<div>
 			<label>Email Address</label>
 			<input type="email" name="email" value="" required />
@@ -40,20 +52,31 @@
 			<input type="text" name="phone" value="" required minLength="10" maxLength="10" />
 		</div>
 		
-		Skills 
-		// checkboxes - Java, HTML, Dot net, NodeJS
+		<div>
+			<label>Skills</label>
+			checkboxes - Java, HTML, Dot net, NodeJS
+		</div>
 		
-		Gender
-		// Radio - Male, Female
+		<div>
+			<label>Gender</label>
+			Radio - Male, Female
+		</div>
 		
-		Address
-		// Text
+		<div>
+			<label>Address</label>
+			Text
+		</div>
 		
-		City
-		// select option -> Nashik, Mumbai, Pune, Nagpur, Solapur, Kolhapur
+		<div>
+			<label>City</label>
+			select option -> Nashik, Mumbai, Pune, Nagpur, Solapur, Kolhapur
+		</div>
 		
-		Date Of Birth
-		// date
+		<div>
+			<label>Date Of Birth</label>
+			date
+		</div>
+		
 		
 		<button type="submit">Register</button>
 	</form>
