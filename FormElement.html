@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+  <meta name="description" content="RockScript training session">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Yogesh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<head>
+	<title>HTML forms</title>
+	<style>
+		
+	</style>
+	<script>
+		function onFormSubmit(e) {
+			console.log(e);
+			alert('form submitted in javascript')
+		}
+	</script>
+</head>
+<body>
+	<h1>Registration</h1>
+	<form onSubmit="onFormSubmit(event)">
+		<label>First Name: </label>
+		<input type="text" name="first_name" value="" required />
+		<label>Last Name: </label>
+		<input type="text" name="last_name" value="" required />
+		<div>
+			<label>Email Address</label>
+			<input type="email" name="email" value="" required />
+		</div>
+		
+		<div>
+			<label>Age</label>
+			<input type="number" name="age" value="" required min="0" max="100"/>
+		</div>
+		
+		<div>
+			<label>Phone number</label>
+			<input type="text" name="phone" value="" required minLength="10" maxLength="10" />
+		</div>
+		
+		Skills 
+		// checkboxes - Java, HTML, Dot net, NodeJS
+		
+		Gender
+		// Radio - Male, Female
+		
+		Address
+		// Text
+		
+		City
+		// select option -> Nashik, Mumbai, Pune, Nagpur, Solapur, Kolhapur
+		
+		Date Of Birth
+		// date
+		
+		<button type="submit">Register</button>
+	</form>
+</body>
+</html>
