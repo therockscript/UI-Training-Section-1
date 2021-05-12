@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+  <meta name="description" content="RockScript training session">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Yogesh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<head>
+	<title>CSS grid layouts</title>
+	<style>
+		.parent {
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr;
+			grid-gap: 50px;
+		}
+			
+		.parent div {
+			height: 100px;
+			background-color: lightgrey;
+			border: 1px solid red;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div style="float: right">First Div</div>
+	<div class="parent">
+		<div class="one">one</div>
+		<div class="two">two</div>
+		<div class="three">three</div>
+		<div class="four">four</div>
+		<div class="five">five</div>
+		<div class="six">six</div>
+	</div>
+</body>
+		
+<html>

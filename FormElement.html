@@ -18,6 +18,20 @@
 			margin-bottom: 5px;
 			font-weight: bold;
 		}
+		/*
+		input:invalid {
+		  box-shadow: 0 0 1px 1px red;
+		}
+		input:focus:invalid {
+		  box-shadow: none;
+		}
+		
+		input {
+			border-top-width: 0px;
+			border-right-width: 0px;
+			border-bottom-width: 1px;
+			border-left-width: 0px;
+		}*/
 	</style>
 	<script>
 		function onFormSubmit(e) {
@@ -54,13 +68,24 @@
 		
 		<div>
 			<label>Skills</label>
-			checkboxes - Java, HTML, Dot net, NodeJS
+			<input type="checkbox" value="java" name="skills" required /> Java
+			<input type="checkbox" value="html" name="skills" required /> HTML
+			<input type="checkbox" value="dotnet" name="skills" required /> Dot net
+			<input type="checkbox" value="nodejs" name="skills" required /> NodeJS
 		</div>
 		
 		<div>
 			<label>Gender</label>
-			Radio - Male, Female
+			<input type="radio" value="male" name="gender" required /> Male
+			<input type="radio" value="female" name="gender" required /> Female
 		</div>
+		
+		<div>
+			<label>Married</label>
+			<input type="radio" value="yes" name="married" required /> Yes
+			<input type="radio" value="no" name="married" required /> No
+		</div>
+		
 		
 		<div>
 			<label>Address</label>
@@ -69,7 +94,14 @@
 		
 		<div>
 			<label>City</label>
-			select option -> Nashik, Mumbai, Pune, Nagpur, Solapur, Kolhapur
+			<select class="form-control" name="" required>
+				 <option>--Select City--</option>
+				 <option value="nashik">Nashik</option>
+				 <option value="pune">Pune</option>
+				 <option value="mumbai">Mumbai</option>
+				 <option value="nagpur">Nagpur</option>
+				 <option value="Jalgon">Jalgon</option>
+			</select>
 		</div>
 		
 		<div>
