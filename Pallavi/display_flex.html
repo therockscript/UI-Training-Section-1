@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+   
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+	<title>Display Flex Form</title>
+	<style>
+		.card
+		{
+			width: 50%;
+		}
+		.row{
+			display: flex;
+			 flex: 50%;
+		}
+		.col-md-6{
+			flex: 2;
+			background-color: #ABEBC6;
+		}
+
+		.form-control{
+			flex: 1;
+			background-color: #BFC9CA;
+
+		}
+		/*.col-md-12{
+			flex: 2;
+			background-color: #D4EFDF ;
+             flex: 50%;
+		}*/
+	</style>
+</head>
+<script>
+		function onFormSubmit(e) {
+			console.log(e);
+			alert('form submitted in javascript')
+		}
+	</script>
+<body style="background-color: #999999;"><br>
+	<div class="container">
+		<div class="card">
+			<div class="card-heading" style="background-color: #800000; color: white">
+					<center><h2>New Register</h2></center>
+					</div>
+			<div class="card-body">
+				
+				<form onSubmit="onFormSubmit(event)">
+					
+				<!--  <center><h1 style="background-color: black; color: white">Registration Form</h1></center> -->
+				
+				 <div class="row">
+			       <div class="col-md-12">
+			       	 	      <div class="row">
+			       	 		  <div class="col-md-6">
+			       	 		<label for="">First Name</label>
+							<input type="text" class="form-control" name="fname" placeholder="Enter First Name" required="">
+			       	 	     </div>
+
+			       	 		    <div class="col-md-6">
+			       	 			<label for="">Last Name</label>
+							<input type="text" class="form-control" name="lname" placeholder="Enter Last Name" required="">
+			       	         </div>
+			       	         </div><br>
+                            
+                           <div class="row">
+			       	 		  <div class="col-md-6">
+			       	 		<label for="">Email</label>
+							<input type="email" class="form-control" name="email" placeholder="Enter Email" required="">
+			       	 	     </div>
+
+			       	 		    <div class="col-md-6">
+			       	 			<label for="">DOB</label>
+							<input type="date" class="form-control" name="dob" required="">
+			       	         </div>
+			       	         </div>
+			       	        
+                             <br>
+                             <div class="row">
+			       	 		  <div class="col-md-6">
+			       	 		<label for="">Age</label>
+							<input type="number" class="form-control" name="age" placeholder="Enter Your age" required="" min="0" max="100">
+			       	 	     </div>
+
+			       	 		    <div class="col-md-6">
+			       	 			<label for="">Phone Number</label>
+							<input type="text" class="form-control" name="phn_no" placeholder="Enter Phone Number" required="" minLength="10" maxLength="10">
+			       	         </div>
+			       	         </div><br>
+
+
+                               <div class="row">
+			       	 		  <div class="col-md-6">
+			       	 		<label>Address</label>
+			       	 		<textarea class="form-control" name="address" placeholder="Enter Address" required=""></textarea>
+			       	 	     </div>
+
+			       	 		    <div class="col-md-6">
+			       	 			<label for="">City</label><br>
+							<select class="form-control" name="city" required="">
+						     <option>--Select City--</option>
+						     <option value="nashik">Nashik</option>
+						     <option value="pune">Pune</option>
+						     <option value="mumbai">Mumbai</option>
+						     <option value="nagpur">Nagpur</option>
+						     <option value="jalgaon">Jalgaon</option>
+                          </select>
+			       	         </div>
+			       	         </div><br>
+
+			       	         <div class="row">
+			       	 		  <div class="col-md-6">
+			       	 		<label for="">Gender</label><br>
+							<input type="radio" name="gender" value="male">
+							<label for="male">Male</label>
+							<input type="radio" name="gender" value="female">
+							<label for="female">Female</label>
+			       	 	     </div>
+
+			       	 		    <div class="col-md-6">
+			       	 			<label for="">Skills</label><br>
+							<input type="checkbox" name="">Java 
+							<input type="checkbox" name="">Php
+							<input type="checkbox" name="" />Android
+							<input type="checkbox" name="">Mysql
+							<input type="checkbox" name="">Python 
+							
+					
+							<br />
+			       	         </div>
+			       	         </div>
+                        <button type="submit" class="btn" style="color: white;background-color: #800000;">Register</button>
+			       	      
+                      </div>
+                 
+
+			       
+			     </div>  
+                      <div></div>
+			    </form>
+		    </div>
+		   
+		</div>
+
+	</div>
+
+</body>
+</html>
