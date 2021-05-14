@@ -8,36 +8,19 @@
 	
 <head>
 	<title>HTML Tables</title>
+		<link rel="stylesheet" href="bootstrap.css">
+		<script src="jquery-3.2.1.slim.min.js"></script>
+		<script src="popper.min.js"></script>
+		<script src="bootstrap.min.js"></script>
 	<style>
-		table, th, td {
-			border: 1px solid black;
-			border-collapse: collapse;
-			padding:0px;
-			margin: 0px;
-		}
 		
-		tr:nth-child(even) {
-			background-color: lightblue;
-		}
-		
-		tr:nth-child(odd) {
-			background-color: lightgreen;
-		}
-		
-		tr:first-child {
-			background-color: lightred;
-		}
-		
-		tr:last-child {
-			background-color: white;
-		}
 		
 	</style>
 	<script>
 	</script>
 </head>
 <body>
-	<table>
+	<table class="table table-striped">
 		<tr>
 			<th>Roll number</th>
 			<th>Name</th>
