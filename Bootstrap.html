@@ -1,0 +1,115 @@
+
+  
+<!DOCTYPE html>
+
+	
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<title>Register Here!</title>
+	
+	<script>
+		function onFormSubmit(e) {
+			console.log(e);
+			alert('Thank You!Sucessfully Registered.')
+		}
+	</script>
+</head>
+<body style="background-color: lightgrey";><br>
+<div class="container">
+<div class="card" style="background-color: lightgreen";>
+	<div class="card-heading" style="color:black";>
+	<center><h1>Registration Form</h1><center>
+	</div>
+	<div class="card-body">
+	<form onSubmit="onFormSubmit(event)">
+	
+     <div class="row">
+			       <div class="col-md-8">
+			       	 	      <div class="row">
+			       	 		  <div class="col-md-4">
+		<label for="">First Name: </label>
+      
+		<input type="text" name="first_name" value="" placeholder="Enter First Name" required />
+		</div>
+        <div class="col-md-4">
+		<label for="">Last Name: </label>
+     
+		<input type="text" name="last_name" value="" placeholder="Enter Last Name" required />
+      </div>
+	  </div>
+	  <br>
+      
+		<div class ="row">
+		<div class="col-md-4">
+          
+			<label for="">Email Address:</label>
+			<input type="email" name="email" value="" placeholder="Enter Email" required />
+			</div>
+			<div class="col-md-4">
+          <label for="">Phone number:</label>
+			<input type="text" name="phone" value="" placeholder="Enter Phone Number" required minLength="10" maxLength="10" />
+		</div>
+		</div>
+		<br>
+		 <div class="row">
+			       	 		  <div class="col-md-4">
+			       	 		<label for="">Age:</label><br>
+							<input type="number" name="age" value="" placeholder="Enter your age" required="" min="0" max="100">
+			       	 	     </div>
+			       	 		  <div class="col-md-4">
+			       	 			<label for="">DOB:</label><br>
+							<input type="date"  name="dob" value="" required="">
+			       	         </div>
+			       	         </div><br>
+    <div class="row">
+	<div class="col-md-4">
+      <label for="">Address:</label>
+      <input type="text" name="address" value="" placeholder="Enter Address" required="" minLength="10" maxLength="100">
+      </div>
+      <div class="col-md-4">
+			       	 			<label for="">City:</label><br>
+							<select class="form-control" name="city" required="">
+						     <option>--Select City--</option>
+						     <option value="nashik">Nashik</option>
+						     <option value="pune">Pune</option>
+						     <option value="mumbai">Mumbai</option>
+						     <option value="nagpur">Nagpur</option>
+						     <option value="jalgaon">Jalgaon</option>
+                          </select>
+			       	         </div>
+			       	         </div><br>
+
+			       	         <div class="row">
+			       	 		  <div class="col-md-4">
+			       	 		<label for="">Gender:</label><br>
+							<input type="radio" name="gender" value="male">
+							<label for="male">Male</label><br>
+							<input type="radio" name="gender" value="female">
+							<label for="female">Female</label><br>
+			       	 	     </div>
+
+			       	 		    <div class="col-md-4">
+			       	 			<label for="">Skills:</label><br>
+							<input type="checkbox" name="">Java <br>
+							<input type="checkbox" name="">HTML <br>
+							<input type="checkbox" name="">DotNet<br>
+							<input type="checkbox" name="">Python <br>
+							<br/>
+			       	         </div>
+			       	         </div>
+                        <button type="submit" class="btn" style="color: white;background-color: Green";>Submit</button>
+			       	      
+                      </div>
+			     </div>  
+                     
+			    </form>
+		    </div>
+		   
+		</div>
+
+	</div>
+
+</body>
+</html>
