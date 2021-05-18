@@ -1,0 +1,91 @@
+<html>
+
+<script src="users.js"></script>
+<script>
+	function bodyOnLoad() {
+		let skills = ["C", "C++", "Java", "Node"];
+		console.log(skills);
+		
+		let skills1 = [
+			"C", 
+			"C++", 
+			"Java", 
+			"Node", 
+			1, 
+			2, 
+			3, 
+			true, 
+			false, 
+			["x", "y", "Z"], 
+			function() {
+				alert("hello")
+			},
+			null
+		];
+		console.log(skills1);
+		console.log("Item at index 9 => ", skills1[9]);
+		console.log("Item at index 15 => ", skills1[15]);
+		
+		console.log("Length of skills => ", skills.length);
+		console.log("Length of skills1 => ", skills1.length);
+		
+		console.log("Adding removing elements in Array");
+		const numbers = [];
+		numbers.push(1);
+		numbers.push(2);
+		numbers.push(3);
+		numbers.pop();
+		console.log("numbers.length => ", numbers.length, numbers);  // 1 2
+		numbers.unshift(0);
+		numbers.unshift(-1);
+		numbers.unshift(-2);
+		numbers.shift();
+		console.log("numbers.length => ", numbers.length, numbers);
+	
+		console.log("Array indexOf function");
+		const names = ["Alice", "Bob", "Carol", "Dave", "Elie"];
+		console.log("Index of Bob ==> ", names.indexOf("Bob"));
+		console.log("Index of John ==> ", names.indexOf("John"));
+		
+		console.log("Array filter function");
+		const marks = [90, 80, 12, 34, 56, 74, 65];
+		console.log("Filter => ", marks.filter((mark) => (mark > 40)));
+		console.log("Find => ", marks.find((mark) => mark === 34));
+		console.log("Find index => ", marks.findIndex((mark) => mark === 34));
+		console.log(marks.join(","));
+		/*
+		console.log(marks.filter(function(mark) {
+			if (mark < 40) {
+				return true;
+			} else {
+				return false;
+			}
+		}));
+		
+		console.log(marks.filter(function(mark) {
+			return (mark > 40)
+		}))
+		*/
+		
+		
+		
+		/*
+		const test = () => {
+			alert('test')
+		}
+		
+		const printName = () => {
+			alert('printing the name')
+		}
+		
+		printName();
+		test();
+		*/
+	}
+</script>	
+	
+<body onload="bodyOnLoad()">
+
+	
+</body>
+</html>

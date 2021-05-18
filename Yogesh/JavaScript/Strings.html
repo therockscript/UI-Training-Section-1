@@ -1,0 +1,26 @@
+<html>
+	
+
+	
+<body>
+	<h1>String creation</h1>
+	<h1>String escaping</h1>
+	<p id="output"></p>
+	
+	<script>
+		function template_demo(name, email, date) {
+			/*
+			let output = "Hi " + name + "<br>" +
+			"this is to inform your email address " + email + " is registerd with us at " + date;
+			*/
+			let output = `Hi ${name}
+				This is to inform your email address ${email} is registerd with us at ${date}
+			`
+			return output;
+		}
+		const data = template_demo("Yogesh", "test@test.com", "17 May 2021");
+		const output = document.getElementById("output");
+		output.innerHTML = data;
+</script>
+</body>
+</html>
