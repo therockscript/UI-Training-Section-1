@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array and array Functions</title>
+</head>
+<script>
+	function myFunction(){
+		let colors=["Red","Blue","Green","Orange","White","Black",1,2,3];
+		
+		console.log(colors);
+		console.log("Item at index 2 => ", colors[2]);
+
+		console.log(colors.length);
+		console.log("Adding and removing elements from array");
+		const fruits=["Apple","Mango"];
+		console.log(fruits);
+		fruits.push("Pineapple");
+		fruits.push("Watermelon");
+		fruits.push("chiku");
+		fruits.pop("");
+		console.log("fruits-length => ", fruits.length, fruits);
+		//console.log(fruits);
+		fruits.unshift("Papaya");
+		fruits.shift("Orange");
+		console.log(fruits);
+		console.log("Index of given fruit:",colors.indexOf("White"));
+
+		console.log("Array Filter Function");
+		const numbers=[10,20,30,40,50,60,70];
+	      console.log(numbers.filter((roll_no)=>(roll_no>30)));
+	      console.log("Array Find function=>",numbers.find((roll_no)=>roll_no==40));
+	      console.log("Find index of=>",numbers.findIndex((roll_no)=>roll_no==60))
+	       console.log(numbers.join(","));
+	       let a="Hello how are you?";
+	       console.log(a.split(" "))
+
+		// console.log(numbers.filter(function(roll_no){
+		// 	if(roll_no > 10){
+		// 		return true;
+		// 	}
+		// 	else{
+		// 		return false;
+		// 	}
+		// }));
+       
+	
+	}
+
+
+</script>
+<body onload="myFunction()">
+
+</body>
+</html>
