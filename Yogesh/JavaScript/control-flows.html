@@ -1,0 +1,121 @@
+<html>
+
+<script>
+	function onBodyLoad() {
+		// if its raining
+			// if you have bike wear raincoat
+			// if you have car, don't do anything
+			// if you walk, take umbrella
+		let weather = "raining"; // "sunny", "rainning", "winter"
+		let vehicle = "";
+		
+		if (weather === "raining") {
+			if (vehicle === "bike") {
+				console.log("wear raincoat");
+			} else if (vehicle === "car") {
+				console.log("don't worry");
+			} else {
+				console.log("take umbrella");
+			}
+		} else if (weather === "summer") {
+			if (vehicle === "bike") {
+				console.log("wear sun glasses");
+			} else if (vehicle === "car") {
+				console.log("don't worry");
+			} else {
+				console.log("take umbrella");
+			}
+		}
+		
+		
+		if (weather === "raining" && vehicle === "bike") {
+			console.log("take raincoat");
+		}
+		
+		if (weather === "raining" || vehicle === "bike") {
+			
+		}
+			
+		const user_type = "employee";
+		
+		switch(user_type) {
+
+			case "admin":
+				console.log("User is admin")
+				break;
+			case "manager":
+				console.log("User is manager")
+				break;
+			case "student":
+				console.log("User is student")
+				break;
+			case "teacher":
+				console.log("User is teacher")
+				break;
+			case "hod":
+				console.log("User is hod")
+				break;
+			default:
+				console.log("User is different, not in list");
+		}		
+		
+		const marks = 30;
+		let is_result = (marks > 40) ? "passed" : "failed";
+		console.log(is_result);
+		
+		console.log("***********for loops *****************");
+		for (let i=0; i<=10; i=i+2) {
+			console.log("Value of i is ", i)
+		}
+		const marks_array = [90, 80, 12, 34, 56, 74, 65];
+		for (let i=0; i<marks_array.length; i++) {
+			console.log("mark is ", marks_array[i]);
+		}
+		
+		for (let m of marks_array) {
+			console.log("marks m is ", m);
+		}
+		
+		for (let m in marks_array) {
+			console.log("marks m is ", marks_array[m]);
+		}
+		
+		marks_array.forEach((m, index) => {
+			console.log("For each marks m is ", index, m);
+		})
+		
+		/*
+		marks_array.map((m, index) => {
+			console.log("For each marks m is ", index, m);
+		})
+		*/
+		
+		console.log("***********for loops break *****************");
+		// [90, 80, 12, 34, 56, 74, 65]
+		for (let i=0; i<marks_array.length; i++) {
+			if (marks_array[i] < 40) {
+				// break;
+				// continue;
+			}
+			console.log("Passed ", marks_array[i]);
+		}
+		
+		console.log("***********while loops  *****************");
+		let i = 0;
+		while(marks_array[i] > 40) {
+			console.log("inside while loop ", marks_array[i]);
+			i++;
+		}
+		
+		let name = "abc";
+		name = "xyz";
+		
+		let city = "pune";
+		city = "mumbai";
+	}
+</script>
+
+<body onload="onBodyLoad()">
+</body>
+
+</html>
