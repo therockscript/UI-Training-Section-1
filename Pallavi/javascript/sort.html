@@ -1,0 +1,82 @@
+<html>
+<body>
+	<script>
+		function add(){
+			const num1=document.getElementById("number1");
+			const num2=document.getElementById("number2");
+
+			const n1=parseInt(num1.value);
+			const n2=parseInt(num2.value);
+			response.innerHTML=`<h2>${n1 + n2}</h2>`;
+		}
+
+		function multiply(){
+			const num1=document.getElementById("number1");
+			const num2=document.getElementById("number2");
+
+			const n1=parseInt(num1.value);
+			const n2=parseInt(num2.value);
+			response.innerHTML=`<h2>${n1 * n2}</h2>`;
+		}
+
+		function divide(){
+			const num1=document.getElementById("number1");
+			const num2=document.getElementById("number2");
+
+			const n1=parseInt(num1.value);
+			const n2=parseInt(num2.value);
+			response.innerHTML=`<h2>${n1 / n2}</h2>`;
+		}
+
+		function sub(){
+			const num1=document.getElementById("number1");
+			const num2=document.getElementById("number2");
+
+			const n1=parseInt(num1.value);
+			const n2=parseInt(num2.value);
+			response.innerHTML=`<h2>${n1 - n2}</h2>`;
+		}
+	</script>
+	<div>Number 1:<input type="number" name="" id="number1"></div><br>
+	<div>Number 2:<input type="number" name="" id="number2"></div><br>
+	<div><button onclick="add()">Add:</button>
+	<button onclick="multiply()">Multiply:</button>
+	<button onclick="divide()">Division:</button>
+	<button onclick="sub()">Substract:</button>
+</div><br>
+	Output:<div id="response"></div>
+	<br>
+
+<p>Click the button to sort the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+		<script>
+		let marks = [85,34,57,62,95,25];
+		document.getElementById("demo").innerHTML = marks;
+         // Sort in ascending Order
+		function myFunction() {
+		  marks.sort();
+		  document.getElementById("demo").innerHTML = marks;
+		}
+
+
+		     // Sort in Descending Order
+		 //  function myFunction(){
+		 //  	marks.sort((a, b) => {
+			//     if (a > b)
+			//         return -1;
+			//     if (a < b)
+			//         return 1;
+			//     return 0;
+			//     document.getElementById("demo").innerHTML = marks;
+			// });
+		 //  }
+		</script>
+		
+
+
+</body>
+</html>

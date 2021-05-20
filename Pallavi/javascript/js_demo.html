@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript Demo</title>
+	<title>To Change the background Color</title>
+	<script>
+function clrchange()
+{
+document.bgColor=document.getElementById('s1').value;
+}
+
+  function color()
+   {
+		a=document.getElementById('s1').value;
+		if(a.getElementById('r1'))
+		{
+			//document.getElementById('r1').style.background="red";
+		  background:"red";
+		}
+			else if(a.getElementById('r2'))
+			{
+			  background:"blue";
+			}
+				else if(a.getElementById('r3'))
+				{
+				  background:"green";
+				}
+					else if(a.getElementById('r4'))
+					{
+					  background:"purple";
+					}
+					  else if(a.getElementById('r5'))
+						{
+						  background:"yellow";
+						}
+   }
+
+</script>
+<select id=s1 onchange=clrchange()>
+<option>***Select Color***</option>
+<option id=r1 onclick=color()>red</option>
+<option id=r2 onclick=color()>blue</option>
+<option id=r3 onclick=color()>green</option>
+<option id=r4 onclick=color()>purple</option>
+<option id=r5 onclick=color()>yellow</option>
+<select>
 </head>
 <body>
-<script>
-	
-</script>
+
 </body>
 </html>
