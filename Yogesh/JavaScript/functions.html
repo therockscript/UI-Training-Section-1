@@ -1,0 +1,84 @@
+<html>
+
+<script>
+function onBodyLoad() {
+	// specific tasks
+	// addition 
+	// multiply
+	function addition(a, b) {
+		// input a , b
+		return a + b;
+	}
+	
+	/*
+	function(a, b) {
+	}
+	*/
+	
+	const addition2 = function(a, b) {
+		
+	}
+	
+	// arrow function
+	const addition3 = (a, b) => {
+		return a + b
+	}
+	
+	const output = addition(12, 34);
+	
+	/*
+	const button = document.getElementsByTagName("button")[0];
+	button.addEventListener("click", function() {
+		alert("button clicked")	;
+	})
+	*/
+}
+
+
+function addition(input=[]) {
+    let sum = 0;
+    for (let i=0; i<input.length; i++) {
+        sum = sum + input[i];
+    }
+    return sum;
+}
+
+function multiply(input, input1, input2) {
+    let sum = 0;
+    for (let i=0; i<input.length; i++) {
+        sum = sum * input[i];
+    }
+    return sum;
+}
+	
+function onAddClick() {
+	const num_1 = document.getElementById("num_1");
+	const num_2 = document.getElementById("num_2");
+	const output = document.getElementById("output");
+	
+	const n1 = parseInt(num_1.value);
+	const n2 = parseInt(num_2.value);
+	
+	output.innerHTML = `
+		<h1>${n1 + n2}</h1>
+	`;
+}
+</script>
+
+<body onload="onBodyLoad()">
+	<div>
+		Number 1: <input type="number" id="num_1" />
+	</div>
+	<div>
+		Number 2: <input type="number" id="num_2" />
+	</div>
+	<div>
+		<button onclick="onAddClick()">Add</button>
+	<div>
+	<div>
+		Output: 
+		<div id="output"></div>
+	</div>
+</body>
+
+</html>
