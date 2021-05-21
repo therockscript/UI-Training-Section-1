@@ -37,8 +37,9 @@
 		}*/
 	</style>
 	<script>
-		function onFormSubmit(e) {
-			console.log(e);
+		function onFormSubmit(event) {
+			console.log(event);
+			event.preventDefault();
 			alert('form submitted in javascript')
 		}
 	</script>

@@ -1,0 +1,101 @@
+<html>
+
+<script>
+	function changeBackgroundColor() {
+		const output = document.getElementById("output");
+		output.style.background = getRandomColor();
+	}
+	
+	function getRandomColor() {
+		const red = getRandomNumber(255);
+		const green = getRandomNumber(255);
+		const blue = getRandomNumber(255);
+		return `rgb(${red}, ${green}, ${blue})`;
+	}
+	
+	function getRandomNumber(maxNumber) {
+		return Math.random() * maxNumber;
+	}
+	
+	function onColorChange(event) {
+		console.log(event);
+		// const colorElement = document.getElementById("color_select");
+		// console.log("onColorChange ", colorElement.value);
+		const value = event.target.value;
+		// document.getElementsByTagName("body")[0].style.background = colorElement.value;
+		document.getElementsByTagName("body")[0].style.background = value;
+	}
+	
+	function onBodyLoad() {
+		const colorElement = document.getElementById("color_select");
+		colorElement.addEventListener("change", onColorChange);
+		
+		const colorElement1 = document.getElementById("color_select_1");
+		colorElement1.addEventListener("change", onColorChange);
+		// colorElement.removeEventListener("change", onColorChange);
+	}
+	
+	function onFormSubmit(event) {
+		console.log(event);
+		event.preventDefault();
+		event.stopPropagation();
+		event.stopImmediatePropagation();
+	}
+	
+	function div_1_clicked(event) {
+		console.log("div_1_clicked")
+		event.stopPropagation();
+	}
+	function div_2_clicked() {
+		console.log("div_2_clicked")
+	
+	}
+	function div_3_clicked() {
+		console.log("div_3_clicked")
+	
+	}
+	function div_4_clicked(event) {
+		console.log("div_4_clicked")
+		event.stopPropagation();
+	}
+</script>
+
+<body onload="onBodyLoad()" 
+	onmouseenter="changeBackgroundColor()"
+	onmouseleave="console.log('mouse leave')">
+	<div id="output" style="height: 200px; width: 200px; border: 5px solid black;">
+	</div>
+	
+	<select id="color_select">
+		<option value="red">Red</option>
+		<option value="green">Green</option>
+		<option value="blue">Blue</option>
+	</select>
+	
+	<select id="color_select_1">
+		<option value="yellow">Yello</option>
+		<option value="black">Black</option>
+		<option value="white">White</option>
+	</select>
+	
+	<form onsubmit="onFormSubmit(event)">
+		Name : <input type="text" name="first_name" />
+		<button type="submit">Submit form</button>
+	</form>
+	
+	<div id="div_1" onclick="div_1_clicked(event)" 
+			style="height: 400px; width: 400px; background: red;">
+		<div id="div_2" onclick="div_1_clicked(event)" 
+			style="height: 300px; width: 300px; background: green;">
+			<div id="div_3" onclick="div_1_clicked(event)" 
+				style="height: 200px; width: 200px; background: blue;">
+				<div id="div_4" onclick="div_1_clicked(event)" 
+					style="height: 100px; width: 100px; background: yellow;">
+		
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
