@@ -44,7 +44,7 @@
 	
 	function div_1_clicked(event) {
 		console.log("div_1_clicked")
-		event.stopPropagation();
+		//event.stopPropagation();
 	}
 	function div_2_clicked() {
 		console.log("div_2_clicked")
@@ -52,7 +52,7 @@
 	}
 	function div_3_clicked() {
 		console.log("div_3_clicked")
-	
+	    //event.stopPropagation();
 	}
 	function div_4_clicked(event) {
 		console.log("div_4_clicked")
@@ -85,11 +85,11 @@
 	
 	<div id="div_1" onclick="div_1_clicked(event)" 
 			style="height: 400px; width: 400px; background: red;">
-		<div id="div_2" onclick="div_1_clicked(event)" 
+		<div id="div_2" onclick="div_2_clicked(event)" 
 			style="height: 300px; width: 300px; background: green;">
-			<div id="div_3" onclick="div_1_clicked(event)" 
+			<div id="div_3" onclick="div_3_clicked(event)" 
 				style="height: 200px; width: 200px; background: blue;">
-				<div id="div_4" onclick="div_1_clicked(event)" 
+				<div id="div_4" onclick="div_4_clicked(event)" 
 					style="height: 100px; width: 100px; background: yellow;">
 		
 				</div>
