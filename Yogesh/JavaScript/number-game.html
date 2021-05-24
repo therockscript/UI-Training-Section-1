@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<script src="number-game.js"></script>
+	<title>The Number game test</title>
+	<link rel="stylesheet" href="../../bootstrap.css">
+	<script src="../../jquery-3.2.1.slim.min.js" ></script>
+	<script src="../../popper.min.js"></script>
+	<script src="../../bootstrap.min.js"></script>
+	
+	<style>
+	</style>	
+</head>
+<body onload="startGame()">
+
+	<div class="container-fluid p-5">
+		<div class="form-group">
+			<input id="user-input" class="form-control" 
+				placeholder="Enter your guess..."
+				type="number" min="0" max="100" />
+		</div>
+		
+		<div id="hint" class="alert alert-info"></div>
+		
+		<div>
+			<button type="button" onclick="onUserSubmit()">Submit</button>
+			<button id="new-game" type="button" onclick="startGame()">New Game</button>
+		</div>
+	</div>
+</body>
+</html>
