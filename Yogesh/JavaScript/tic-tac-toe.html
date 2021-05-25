@@ -1,0 +1,39 @@
+<html>
+
+<script src="tic-tac-toe.js"></script>
+<link rel="stylesheet" href="../../bootstrap.css">
+<script src="../../jquery-3.2.1.slim.min.js" ></script>
+<script src="../../popper.min.js"></script>
+<script src="../../bootstrap.min.js"></script>
+<link rel="stylesheet" href="tic-tac-toe.css">
+
+<body onload="startGame()">
+	<div class="row">
+		<div id="0_0" class="box col-4" onclick="onBoxClick(0, 0)">
+		</div>
+		<div id="0_1" class="box col-4" onclick="onBoxClick(0, 1)">
+		</div>
+		<div id="0_2" class="box col-4" onclick="onBoxClick(0, 2)">
+		</div>
+		<div id="1_0" class="box col-4" onclick="onBoxClick(1, 0)">
+		</div>
+		<div id="1_1" class="box col-4" onclick="onBoxClick(1, 1)">
+		</div>
+		<div id="1_2" class="box col-4" onclick="onBoxClick(1, 2)">
+		</div>
+		<div id="2_0" class="box col-4" onclick="onBoxClick(2, 0)">
+		</div>
+		<div id="2_1" class="box col-4" onclick="onBoxClick(2, 1)">
+		</div>
+		<div id="2_2" class="box col-4" onclick="onBoxClick(2, 2)">
+		</div>
+	</div>
+	
+	<div id="result" class="alert alert-success"></div>
+	<button id="start" type="button" 
+		class="btn btn-primary"
+		onclick="startGame()"
+		>Start</button>
+</body>
+
+</html>
