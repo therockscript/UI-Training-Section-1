@@ -2,7 +2,7 @@ let number=null;
 let counter=0;
 function startGame(){
 	 number=getRandomNumber(100);
-     //alert("on body loaded generated no", + number);
+     // alert("on body loaded generated no" + number);
      hideHint();
      hideNewButton();
      clearInput();
@@ -17,7 +17,7 @@ function showHint(message){
     const hint_element=document.getElementById("hint");
     hint_element.style.display="block";
     hint_element.innerHTML=message;
- }
+}
 
  function hideHint(){
  	const hide_hint_element=document.getElementById("hint");
@@ -36,16 +36,16 @@ function onUserSubmit()
    const value_number=parseInt(value);
    console.log(value_number);
    console.log(typeof value_number);
-    if (value_number == "") {
+    if (isNaN(value_number)) {
     	showHint("Please Enter the value");
-	return;
+		return;
     	//alert("please enter value");
     } else if (value_number > 100 || value_number < 0) {
         showHint("Please Enter the value between 0 to 100");
-	return;
+		return;
     }
 
-counter++; 
+	counter++; 
 
     if (value_number > number) {
     	showHint("Number is Greater");
