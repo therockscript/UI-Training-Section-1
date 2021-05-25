@@ -3,7 +3,7 @@ let counter = 0;
 
 function startGame() {
 	number = getRandomNumber(100);
-	// alert("on body load, generated number " + number);
+	 //alert("on body load, generated number " + number);
 	hideHint();
 	hideNewGameButton();
 	clearInput();
