@@ -38,9 +38,11 @@ function onUserSubmit()
    console.log(typeof value_number);
     if (value_number == "") {
     	showHint("Please Enter the value");
+	return;
     	//alert("please enter value");
-    }else if (value_number > 100 || value_number < 0) {
+    } else if (value_number > 100 || value_number < 0) {
         showHint("Please Enter the value between 0 to 100");
+	return;
     }
 
 counter++; 
