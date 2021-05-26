@@ -1,0 +1,44 @@
+<html>
+
+<script>
+	const product = {
+		id: 101,
+		name: "LG OLED TV",
+		manufacture: "LG",
+		category: {
+			name: "TV",
+			parent: {
+				name: "Electrical",
+				parent: {
+					name: "Home appliaces"
+				}
+			}
+		},
+		size: {
+			height: 40,
+			width: 55
+		},
+		features: ["Smart TV", "Power backup", "Lower power consumption"],
+		reviews: [
+			{ 
+				customer_name: "abc",
+				rating: 4,
+				comment: "teasdas asdasd asd asda asda "
+			},
+			{ 
+				customer_name: "xyz",
+				rating: 4.5,
+				comment: "teasdafdafs awewasdasd asd asdas asda "
+			}
+		],
+		getName: function () {
+			alert("test " + JSON.stringify(this.category));
+		}
+	}
+</script>
+
+<body>
+	
+</body>
+
+</html>

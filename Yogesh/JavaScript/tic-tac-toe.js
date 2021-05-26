@@ -19,6 +19,10 @@ function clearBoxClear() {
 }
 
 function onBoxClick(row, col) {
+	const is_winner = checkGame();
+	if (box_array[row][col] != null) return;
+	if (is_winner != "") return;
+	
 	if (chance == "p1") {
 		box_array[row][col] = "O";
 		chance = "p2";
@@ -77,11 +81,22 @@ function checkGame() {
 		}
 	}
 	
+	// check for diagonal top left to bottom right
 	if (box_array[0][0] == box_array[1][1] &&
 	box_array[0][0] == box_array[2][2]) {
 		if (box_array[0][0] == "O") {
 			return "p1";
 		} else if (box_array[0][0] == "X") {
+			return "p2";
+		}
+	}
+	
+	// check for diagonal top right to bottom left
+	if (box_array[0][2] == box_array[1][1] &&
+	box_array[1][1] == box_array[2][0]) {
+		if (box_array[0][2] == "O") {
+			return "p1";
+		} else if (box_array[0][2] == "X") {
 			return "p2";
 		}
 	}
