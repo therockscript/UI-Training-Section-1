@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe Game</title>
+</head>
+<script src="tic_tac_toe.js"></script>
+<link rel="stylesheet" href="../../bootstrap.css">
+<script src="../../jquery-3.2.1.slim.min.js" ></script>
+<script src="../../popper.min.js"></script>
+<script src="../../bootstrap.min.js"></script>
+<link rel="stylesheet" href="tic_tac_toe.css">
+<body onload="startGame()">
+      <div class="container">
+      	  <div class="row">
+      	  	<div class="box col-4" id="0_0" onclick="onBoxClick(0, 0)"></div>
+      	  	<div class="box col-4" id="0_1" onclick="onBoxClick(0, 1)"></div>
+      	  	<div class="box col-4" id="0_2" onclick="onBoxClick(0, 2)"></div>
+      	  	<div class="box col-4" id="1_0" onclick="onBoxClick(1, 0)"></div>
+      	  	<div class="box col-4" id="1_1" onclick="onBoxClick(1, 1)"></div>
+      	  	<div class="box col-4" id="1_2" onclick="onBoxClick(1, 2)"></div>
+      	  	<div class="box col-4" id="2_0" onclick="onBoxClick(2, 0)"></div>
+      	  	<div class="box col-4" id="2_1" onclick="onBoxClick(2, 1)"></div>
+      	  	<div class="box col-4" id="2_2" onclick="onBoxClick(2, 2)"></div>
+      	  </div>
+
+      	  <div class="alert alert-info" id="output"></div>
+      	  <button class="btn btn-warning" id="restart">Restart Game</button>
+      </div>
+</body>
+</html>
