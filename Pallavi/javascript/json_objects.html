@@ -3,18 +3,18 @@
 	<title>Json Objects</title>
 </head>
 <script>
-      const student=[{
-      	roll_no:1,
-      	name:"Harshu",
-      	age:25,
-	      	address:
-	      	{
-	      		plot_no:26,
-	      		area:"Siddhivinayak Colony",
-	      		landmark:"Yashwant Hospital",
-	      		District:"Nashik",
-                State:"Maharashtra"
-	      	},
+      const students=[
+		{
+			roll_no:1,
+			name:"Harshu",
+			age:25,
+			address: {
+				plot_no:26,
+				area:"Siddhivinayak Colony",
+				landmark:"Yashwant Hospital",
+				District:"Nashik",
+				State:"Maharashtra"
+			}
       	},
 
        {
@@ -28,7 +28,7 @@
 	      		landmark:"Balaji Sweets",
 	      		District:"Dhule",
                 State:"Maharashtra"
-	      	},
+	      	}
       	},
  
        {
@@ -57,7 +57,7 @@
 	      		landmark:"CCM",
 	      		District:"Bhopal",
                 State:"Madhya Pradesh"
-	      	},
+	      	}
       	},
 
        {
@@ -71,7 +71,7 @@
 	      		landmark:"Shree Seva Hospital",
 	      		District:"Nashik",
                 State:"Maharashtra"
-	      	},
+	      	}
       	
         },
 
@@ -86,7 +86,7 @@
 	      		landmark:"Ganesh Temple",
 	      		District:"Udaypur",
                 State:"Rajasthan"
-	      	},
+	      	}
       	},
 
       {
@@ -100,7 +100,7 @@
 	      		landmark:"Vitthal Rukmini Temple",
 	      		District:"Amritsar",
                 State:"Punjab"
-	      	},
+	      	}
       	},
 
        {
@@ -114,7 +114,7 @@
 	      		landmark:"Sagar Sweets",
 	      		District:"Nashik",
                 State:"Maharashtra"
-	      	},
+	      	}
       	},
 
       	{
@@ -129,7 +129,7 @@
 	      		landmark:"Vinayak Hospital",
 	      		District:"Jalgaon",
                 State:"Maharashtra"
-	      	},
+	      	}
       	},
 
        {
@@ -146,6 +146,77 @@
 	      	}
       	
       }]
+
+	console.log(students); // get all students
+	const new_student = {
+		roll_no: 11,
+		name: "Ajit",
+		age: 30,
+		address: {
+			plot_no:31,
+			area:"Viman Nagar",
+			landmark:"Near airport",
+			District:"Pune",
+			State:"Maharashtra"
+		}
+	}
+	
+	students.push(new_student) // adding new student to students
+	console.log(students);
+	
+	// update student
+	const update_index = students.findIndex(
+		function(student) {
+			console.log("findIndex : ", student.roll_no);
+			if (student.roll_no === 4) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	);
+	console.log("update_index : ", update_index);
+	students[update_index].age = 25;
+	students[update_index].gender = "M";
+	students[update_index].address.plot_no = 30;
+	console.log("after update ", students);
+	
+	// delete
+	const delete_index = students.findIndex(
+		function(student) {
+			return student.roll_no === 3;
+		}
+	)
+	console.log("delete_index : ", delete_index);
+	students.splice(delete_index, 1);
+	console.log("after delete ", students);
+	
+	// filter
+	const filtered_students = students.filter(
+		function(student) {
+			return student.age > 30;
+		}
+	);
+	console.log("after filter ", filtered_students);
+	
+	// Print
+	students.forEach(
+		function(student) {
+			console.log(student.roll_no, student.name);
+		}
+	);
+	
+	const student_names = students.map(
+		function(student) {
+			// console.log(student.roll_no, student.name);
+			return {
+				roll_no: student.roll_no,
+				name: student.name
+			};
+		}
+	)
+	console.log("student_names : ", student_names);
+	
 </script>
 <body>
 
