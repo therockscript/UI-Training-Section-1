@@ -66,3 +66,63 @@ function display(){
 		}
 	}
 }
+
+function checkGame(){
+	//check for rows
+
+	for(let i=0; i<box_array.length; i++){
+		if(box_array[i][0]==box_array[i][1] &&
+			box_array[i][1]==box_array[i][2]){
+			if(box_array[i][0]=='O'){
+				return player_1;
+			}else if(box_array[i][0]=='X'){
+			    return player_2;
+           }
+		}
+	}
+
+	//check for columns
+	for(let i=0; i<box_array.length; i++){
+		if(box_array[0][i]==box_array[1][i] &&
+			box_array[1][i]==box_array[2][i]){
+			if(box_array[i][0]=='O'){
+				return player_1;
+			}else if(box_array[i][0]=='X'){
+			    return player_2;
+           }
+		}
+	}
+
+	//check for diagonal elements from left top to right bottom
+
+	 for(let i=0; i<box_array.length; i++){
+		if(box_array[0][0]==box_array[1][1] &&
+			box_array[0][0]==box_array[2][2]){
+			if(box_array[i][0]=='O'){
+				return player_1;
+			}else if(box_array[i][0]=='X'){
+			    return player_2;
+           }
+		}
+	}
+
+	//check for diagonal elements from right top to left bottom
+
+	 for(let i=0; i<box_array.length; i++){
+		if(box_array[0][2]==box_array[1][1] &&
+			box_array[1][1]==box_array[2][0]){
+			if(box_array[i][0]=='O'){
+				return player_1;
+			}else if(box_array[i][0]=='X'){
+			    return player_2;
+           }
+		}
+	}
+
+	if (counter == 9) {
+		return "draw";
+	}
+	
+	return "";
+
+}
