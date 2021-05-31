@@ -1,0 +1,162 @@
+[
+	  {
+      	roll_no:1,
+      	name:"A",
+      	age:22,
+		address:
+		{
+		plot_no:11,
+		Area:"Jail Road",
+		Landmark:"Abhinav School",
+		City:"Nashik",
+		State:"Maharashtra",
+		Country:"India"
+		},
+      	},
+
+       {
+      	roll_no:2,
+      	name:"B",
+      	age:18,
+	      	address:
+	      	{
+	      		plot_no:3,
+				
+	      		Area:"Apoorva Colony",
+	      		Landmark:"Mahadev Mandir",
+	      		City:"Nashik",
+                State:"Maharashtra",
+				Country:"India"
+	      	},
+      	},
+ 
+       {
+      	roll_no:3,
+      	name:"C",
+      	age:20,
+	      	address:
+	      	{
+	      		Flat_no:5,
+				
+	      		Area:"Datta Mandir",
+	      		Landmark:"City Hospital",
+				City:"Thane",
+                State:"Maharashtra",
+				Country:"India"
+	      	},
+      	},
+
+
+        {
+      	roll_no:4,
+      	name:"D",
+      	age:24,
+	      	address:
+	      	{
+	      		plot_no:20,
+				
+	      		Area:"Ganesh Colony",
+	      		Landmark:"Civil Hospital",
+	      		City:"Jalgaon",
+                State:"Maharashtra",
+				Country:"India"
+	      	},
+      	},
+
+       {
+      	roll_no:5,
+      	name:"E",
+      	age:19,
+	      	address:
+	      	{
+	      		plot_no:5,
+				
+	      		Area:"Pacchim Vihar",
+	      		Landmark:"City Hospital",
+	      		City:"New Delhi",
+                State:"New Delhi",
+				Country:"India"
+	      	},
+      	
+        },
+
+        {
+      	roll_no:6,
+      	name:"F",
+      	age:23,
+	      	address:
+	      	{
+	      		plot_no:10,
+				
+	      		Area:"Laxmi Nagar",
+	      		Landmark:"Ganesh Mandir",
+	      	    City:"Lucknow",
+                State:"Uttar Pradesh",
+				Country:"India"
+	      	},
+      	},
+
+      {
+      	roll_no:7,
+      	name:"G",
+      	age:24,
+	      	address:
+	      	{
+	      		Flat_no:12,
+				
+	      		Area:"Sarojini Nagar",
+	      		Landmark:"Metro Mall",
+				City:"Chandigarh",
+				State:"Punjab",
+				Country:"India"
+	      	},
+      	},
+
+       {
+      	roll_no:8,
+      	name:"H",
+      	age:15,
+	      	address:
+	      	{
+	      		plot_no:14,
+			
+	      		Area:"Mall Road",
+	      		Landmark:"Biker's Point",
+	      		City:"Mussoorie",
+                State:"Uttarakhand",
+				Country:"India"
+	      	},
+      	},
+
+      	{
+
+      	roll_no:9,
+      	name:"I",
+      	age:20,
+	      	address:
+	      	{
+	      		Flat_no:20,
+				
+	      		Area:"Pahad Ganj",
+	      		Landmark:"Citi Bank",
+	      		City:"Agra",
+                State:"Uttar Pradesh",
+				Country:"India"
+	      	},
+      	},
+
+       {
+      	roll_no:10,
+      	name:"J",
+      	age:27,
+	      	address:
+	      	{
+	      		plot_no:30,
+	      		Area:"MG Road",
+	      		Landmark:"MG Memorial Hospital",
+	      		City:"Kolkata",
+                State:"West Begal",
+				Country:"India"
+	      	      	}
+      	
+      }]

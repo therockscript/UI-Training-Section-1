@@ -1,0 +1,134 @@
+
+  
+<!DOCTYPE html>
+
+	
+<head>
+	<title>Register Here!</title>
+	<style>
+	body{
+	border: 2px solid black;
+	text-align:justify;
+	margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 350px;
+  margin-left: 350px;
+  padding: 30px;
+  }
+		
+   input[type=text], input[type=first_name]
+      {
+  width:22%;
+ 
+  margin:3px 3px 3px 3px;
+      }
+  input[type=date], input[type=date]
+      {
+	  width:22%;
+      margin:3px 3px 3px 3px;
+  }
+   input[type=email], input[type=email]
+      {
+	  width:22%;
+      margin:3px 3px 3px 3px;
+	  }
+	   input[type=text], input[type=phone value]
+      {
+	  width:22%;
+      margin:3px 3px 3px 3px;
+	  }
+.b1 {
+  background-color:red;
+  border:black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius:20px;
+  
+  font-size: 15px;
+  margin: 2px 2px;
+  cursor: pointer;
+ 
+}
+
+	</style>
+	<script>
+		function onFormSubmit(e) {
+			console.log(e);
+			alert('Thank You!Sucessfully Registered.')
+		}
+	</script>
+</head>
+<body>
+	<h1>Registration Form</h1>
+	<form onSubmit="onFormSubmit(event)">
+    
+		<label>First Name: </label>
+      
+		<input type="text" name="first_name" value="" required />
+        
+		<label>Last Name: </label>
+     
+		<input type="text" name="last_name" value="" required />
+      
+      
+		<div>
+          
+			<label>Email Address</label>
+			<input type="email" name="email" value="" required />
+          <label>Phone number:</label>
+			<input type="text" name="phone" value="" required minLength="10" maxLength="10" />
+		</div>
+		<div>
+            <label>Birthdate:</label>
+            <input type="date" name="date" value="" required/>
+        
+			<label>Age:</label>
+			<input type="number" name="age" value="" required min="0" max="100"/>
+		</div>
+		
+
+    <div>
+      <label>Address:</label>
+      <input type="text" name="address" value="" required minLength="10" maxLength="100">
+      
+     
+        <label for="city">City:</label>
+  <select id="city" name="city" value="" required/>
+    <option value="city1">Nashik</option>
+    <option value="city2">Mumbai</option>
+    <option value="city3">Pune</option>
+    <option value="city4">Aurangabad</option>
+    <option value="city5">Nagpur</option>
+    <option value="city6">Kolhapur</option>
+    <option value="city7">Thane</option>
+  </select>
+     </div>
+     <div>
+       <div>Gender:</div>
+     <input type="radio" id="male" name="gender" value="" required/>
+     <label for="male">Male</label><br>
+     <input type="radio" id="female" name="gender" value="" required/>
+     <label for="female">Female</label><br>
+        </div>
+		<form action="/action_page.php">
+          <div>Skills:<div>
+            
+  <input type="checkbox" id="box1" name="box1" value="">
+  <label for="box1">Java</label><br>
+  <input type="checkbox" id="box2" name="box2" value="">
+  <label for="box2">HTML</label><br>
+  <input type="checkbox" id="box3" name="box3" value="">
+  <label for="box3">Dot Net</label><br>
+  <input type="checkbox" id="box4" name="box4" value="">
+  <label for="box4">NodeJS</label><br>
+            
+ 
+</form>
+		
+		
+<button class="b1">Register</button>
+		
+	</form>
+</body>
+</html>
