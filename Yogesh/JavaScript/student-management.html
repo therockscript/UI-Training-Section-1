@@ -13,7 +13,7 @@
 
 <body onload="onPageLoad()" class="container">
 
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_student_modal">Add Student</button>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_student_modal" onclick="showAddStudentForm()">Add Student</button>
 	
 	<table id="student_table" class="table table-striped">
 	  <thead>
@@ -22,88 +22,88 @@
 		  <th scope="col">Name</th>
 		  <th scope="col">Age</th>
 		  <th scope="col">Address</th>
+		  <th scope="col">Action</th>
 		</tr>
 	  </thead>
 	  <tbody>
-		
 	  </tbody>
 	</table>
 	
 	<div class="modal fade" id="add_student_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Student</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-			<div class="row">
-				<div class="col-4">
-					<div class="form-group">
-						<label>Roll Number</label>
-						<input type="number" class="form-control" name="roll_number" />
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="form-group">
-						<label>Name</label>
-						<input type="text" class="form-control" name="name" />
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="form-group">
-						<label>Age</label>
-						<input type="number" class="form-control" name="age" />
-					</div>
-				</div>
-			</div>
-			
-			<fieldset>
-				<legend>Address:</legend>
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="add_student_modal_label">Add Student</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form>
 				<div class="row">
 					<div class="col-4">
 						<div class="form-group">
-							<label>Plot number</label>
-							<input type="number" class="form-control" name="plot_number" />
+							<label>Roll Number</label>
+							<input type="number" class="form-control" name="roll_number" />
 						</div>
 					</div>
 					<div class="col-4">
 						<div class="form-group">
-							<label>Area</label>
-							<input type="text" class="form-control" name="area" />
+							<label>Name</label>
+							<input type="text" class="form-control" name="name" />
 						</div>
 					</div>
 					<div class="col-4">
 						<div class="form-group">
-							<label>Landmark</label>
-							<input type="text" class="form-control" name="landmark" />
+							<label>Age</label>
+							<input type="number" class="form-control" name="age" />
 						</div>
-					</div>
-					<div class="col-4">
-						<div class="form-group">
-							<label>District</label>
-							<input type="text" class="form-control" name="district" />
-						</div>
-					</div>
-					<div class="col-4">
-						<div class="form-group">
-						<label>State</label>
-						<input type="text" class="form-control" name="state" />
-					</div>
 					</div>
 				</div>
-			</fieldset>
-		</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="onAddStudent()">Add Student</button>
-      </div>
-    </div>
-  </div>
-</div>
+				
+				<fieldset>
+					<legend>Address:</legend>
+					<div class="row">
+						<div class="col-4">
+							<div class="form-group">
+								<label>Plot number</label>
+								<input type="number" class="form-control" name="plot_number" />
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label>Area</label>
+								<input type="text" class="form-control" name="area" />
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label>Landmark</label>
+								<input type="text" class="form-control" name="landmark" />
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label>District</label>
+								<input type="text" class="form-control" name="district" />
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+							<label>State</label>
+							<input type="text" class="form-control" name="state" />
+						</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button id="add_update_button" type="button" class="btn btn-primary">Add Student</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
 </body>
 </html>
