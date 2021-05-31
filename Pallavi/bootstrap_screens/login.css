@@ -1,0 +1,30 @@
+
+.card{
+	margin-top: 40px;
+    margin-left: 25%;
+    margin-right:25%;
+}
+
+.btn{
+    background-color: #191970;
+    color: white;
+}
+
+ .form-rounded {
+              border-radius: 1rem;
+             
+         }
+          .radio{
+              margin-left: 10px;
+         }
+label{
+              margin-left: 5px;
+         }
+
+         p{
+            display: inline;
+         }
+h5{
+    padding-top: 20px;
+}
+

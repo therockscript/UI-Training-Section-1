@@ -1,10 +1,4 @@
-<html>
-<head>
-	<title>Hotel Management System Json Objects</title>
-</head>
-<body>
-	<script>
-        const hotels=
+ const hotels=
         [{
            hotel_id:101,
            hotel_name:"Taj Hotel",
@@ -51,7 +45,7 @@
            description:
            {
              no_of_room:3000,
-             rent:8000,
+             rent:500,
              hotel_type:"4 star",
            },
              services:["Air Condtioning","Fitness area","CD & DVD Players"]
@@ -131,106 +125,3 @@
         }
 
        ] 
-
-       console.log(hotels);
-       const new_hotel=
-       {
-           hotel_id:5050,
-           hotel_name:"Shree Hotel",
-           place:"Nashik",
-           description:
-           {
-             no_of_room:300,
-             rent:1000,
-             hotel_type:"3 star",
-           },
-             services:["Air Condtioning","Fitness area","CD & DVD Players"]
-        }
-
-/*******************************Add and remove New Hotel****************************************/
-
-        hotels.push(new_hotel);
-        //console.log(hotels);
-
-        hotels.pop();
-        //console.log(hotels);
-
-        hotels.unshift(new_hotel);
-        //console.log(hotels);
-
-        hotels.shift(new_hotel);
-        //console.log(hotels);
-
-/**************************************Update Hotel*****************************************/        
-     const update_index=hotels.findIndex(
-          function(hotel){
-            console.log("To find Index Of", hotel.hotel_id);
-            if(hotel.hotel_id === 601)
-            {
-            	return true;
-            }else{
-            	return false;
-            }
-          }
-     	);
-     console.log("update_index : ", update_index);
-     hotels[update_index].place="Nashik";
-     hotels[update_index].description.rent=4000;
-     console.log("After updating data",hotels);
-
-/***********************************Delete Hotel*************************************************/
-    
-    const delete_index=hotels.findIndex(
-            function(hotel){
-               if(hotel.hotel_id === 301)
-               {
-               	return true;
-               }else{
-               	return false;
-               }
-            }
-    	);
-          console.log("delete_index",delete_index);
-          hotels.splice(delete_index,3);
-          console.log("After deleting data",hotels);
-
-/*******************************Filter Function************************************************/
-  
-      const filter_hotel=hotels.filter(
-             function(hotel){
-             	 if(hotel.place==="Mumbai" && hotel.description.rent == 3000){
-             		return true;
-             	}else{
-             		return false;
-             	}
-
-             	 
-             }
-      	)
-          console.log("filter_hotel",filter_hotel);
-          //console.log(hotels);
-
-/************************************Print******************************************************/
-
-        const hotels_print=hotels.forEach(
-              function(hotel){
-                console.log("Print Hotels",hotel.hotel_id, hotel.description.hotel_type, hotel.hotel_name);
-              }
-          	)
-
-           const hotel_prints=hotels.map(
-                function(hotel){
-                	//console.log(hotel.hotel_id);
-                	return{
-                		hotel_id: hotel.hotel_id,
-				        hotel_name: hotel.hotel_name,
-				        hotel_rooms: hotel.description.no_of_room,
-                	}
-                   
-                }
-           	)
-           console.log("hotels details:",hotel_prints);
-           console.log(hotels);
-    </script>
-</body>
-</html>

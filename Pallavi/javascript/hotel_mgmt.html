@@ -1,0 +1,98 @@
+<html>
+<head>
+	<title>hotel mgmt add/display operations</title>
+	<script src="hotel_mgmt.js"></script>
+	<script src="hotel_management.js"></script>
+	<link rel="stylesheet" href="../../bootstrap.css">
+	<script src="../../jquery-3.2.1.slim.min.js" ></script>
+	<script src="../../popper.min.js"></script>
+	<script src="../../bootstrap.min.js"></script>
+	<link rel="stylesheet" href="hotel_management.css">
+</head>
+<body onload="onPageLoad()";>
+
+	<div class="container">
+		<button onclick="document.getElementById('add_hotel_modal').style.display='block'" style="width:auto;">Add Hotel</button>
+	<table id="hotel_table" class="table table-hover">
+    <thead>
+      <tr>
+        <th>Hotel Id</th>
+        <th>Hotel Name</th>
+        <th>Place</th>
+        <th>no_of_rooms</th>
+        <th>Rent</th>
+        <th>Hotel Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+  <div id="add_hotel_modal" class="modal">
+  
+  <form class="modal-content animate" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('add_hotel_modal').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <center><img src="../bootstrap_screens/images/resort.jpg" alt="Avatar" class="avatar"></center>
+    </div>
+
+    <div class="container">
+    	<div class="row">
+           <div class="col-4">
+              <label><b>Hotel Id</b></label>
+    		  <input type="number" placeholder="Enter Hotel Id" name="hotel_id" required>
+           </div>
+
+            <div class="col-4">
+              <label><b>Hotel Name</b></label>
+    		  <input type="text" placeholder="Enter Hotel Name" name="hotel_name" required>
+           </div>
+
+            <div class="col-4">
+              <label><b>Hotel Place</b></label>
+    		  <input type="text" placeholder="Enter Hotel Place" name="hotel_place" required>
+           </div>
+    	</div>
+         
+         <fieldset>
+				<legend>Description:</legend>
+    	<div class="row">
+           <div class="col-4">
+              <label><b>No Of Rooms</b></label>
+    		  <input type="number" placeholder="Enter No Of Rooms" name="no_of_rooms" required>
+           </div>
+
+            <div class="col-4">
+              <label><b>Rent</b></label>
+    		  <input type="number" placeholder="Enter Hotel Rent" name="hotel_rent" required>
+           </div>
+
+            <div class="col-4">
+              <label><b>Hotel Type</b></label>
+    		  <input type="text" placeholder="Enter Hotel Type" name="hotel_type" required>
+           </div>
+    	</div>
+      
+
+      
+      <button type="submit" onclick="onAddHotel()">Add Hotel</button>
+       <button type="button" onclick="document.getElementById('add_hotel_modal').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+
+  
+  </form>
+</div>
+  </div>
+  <script>
+// Get the modal
+var modal = document.getElementById('add_hotel_modal');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>

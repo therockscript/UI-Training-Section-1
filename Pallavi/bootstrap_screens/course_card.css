@@ -1,0 +1,31 @@
+#body_color{
+	background-color: #00022e;
+}
+
+p{
+	padding-top: 15px;
+}
+
+.card{
+	margin-top:100px;
+    margin-left:30%;
+    margin-right:30%;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+h5{
+	padding-top: 20px;
+}
+
+#para{
+	display: inline;
+}
+
+#para2{
+	display: inline;
+	float:right;
+}

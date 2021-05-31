@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>Crud operations</title>
+	<script src="hotel_management.js"></script>
+	<script src="hotel.js"></script>
+	<link rel="stylesheet" href="bootstrap.css">
+	<script src="jquery-3.2.1.slim.min.js" ></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</head>
+<body onload="onPageLoad()">
+	<div class="container">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_hotel_modal" onclick="showAddHotelForm()">Add Hotel</button>
+      <table id="hotel_table" class="table table-hover">
+    <thead>
+      <tr>
+        <th>Hotel Id</th>
+        <th>Hotel Name</th>
+        <!-- <th>Place</th>
+        <th>no_of_rooms</th>
+        <th>Rent</th>
+        <th>Hotel Type</th> -->
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="add_hotel_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="add_hotel_modal_label">Add Hotel</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+             <form>
+             	<div class="row">
+	             	<div class="col-md-4">
+                      <div class="form-group">
+							<label>Hotel Id</label>
+							<input type="number" class="form-control" name="hotel_id" />
+						</div>
+	             	</div>
+
+	             	<div class="col-md-4">
+                      <div class="form-group">
+							<label>Hotel Name</label>
+							<input type="text" class="form-control" name="hotel_name" />
+						</div>
+	             	</div>
+
+	             	<div class="col-md-4">
+
+	             	</div>
+             	</div>
+
+
+             </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="add_update_button" class="btn btn-primary" onclick="onAddHotel()">Add Hotel</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
