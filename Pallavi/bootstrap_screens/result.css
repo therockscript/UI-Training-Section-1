@@ -1,0 +1,26 @@
+.card{
+	margin-top: 40px;
+}
+
+.button {
+  /* Green */
+  color: white;
+  padding: 30px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.button5 {
+	border-radius: 50%;
+	 background-color: #04AA6D;
+}
+.button3 {
+	border-radius: 50%;
+	 background-color: #DC143C	;
+}
+.button4 {
+	border-radius: 50%;
+	 background-color: #20B2AA	;
+}
+p{
+	color:#808080;
+}

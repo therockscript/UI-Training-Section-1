@@ -21,21 +21,20 @@ function add(new_hotel){
   hotels.push(new_hotel);
   displayHotels(hotels);
 }
- 
-function onHotelEdit(hotel_id){
+
+   function onHotelEdit(hotel_id) {
   $('#add_hotel_modal').modal('show');
   clearForm();
-  const hotel_updated=hotels.find(
-      function(hotel){
-        return hotel.hotel_id===hotel_id;
-      }
-    );
-   // console.log(hotel_updated);
+  const hotel_to_be_updated = hotels.find(
+    function(hotel) {
+      return hotel.hotel_id === hotel_id;
+    }
+  );
   const add_hotel_modal_element=document.getElementById("add_hotel_modal");
   const form_element=add_hotel_modal_element.querySelector("form");
 
-  form_element.hotel_id.value=hotel_updated.hotel_id;
-  form_element.hotel_name.value=hotel_updated.hotel_name;
+  form_element.hotel_id.value=hotel_to_be_updated.hotel_id;
+  form_element.hotel_name.value=hotel_to_be_updated.hotel_name;
 
   form_element.hotel_id.disabled=true;
 
@@ -52,22 +51,45 @@ function onHotelEdit(hotel_id){
   }
 } 
 
-function update(hotel_id,update_hotel){
-  const hotel_index=hotels.findIndex(
-      function(hotel){
-        return hotel.hotel_id===hotel_id;
-      }
-    );
-  hotels[hotel_index]=update_hotel;
+
+function update(hotel_id, update_hotel) {
+  const hotel_index = hotels.findIndex(
+    function(hotel) {
+      return hotel.hotel_id === hotel_id;
+    }
+  );
+  hotels[hotel_index] = update_hotel;
   displayHotels(hotels);
 }
 
-function onHotelDelete(){
+function onHotelDelete(hotel_id){
+  $("#delete_confirmation_modal").modal("show");
 
+  const delete_confirmation_modal_element=document.getElementById("delete_confirmation_modal");
+  const delete_hotel_element=document.getElementById("delete_hotel");
+
+  const modal_body_element = delete_confirmation_modal_element.querySelector(".modal-body");
+  modal_body_element.innerHTML = "Do you really want to delete this record? This process cannot be undone." +" "+ + hotel_id + " ?";  
+
+
+  delete_hotel_element.onclick=function(){
+    const hotel_to_be_deleted_index= hotels.findIndex(
+        function(hotel){
+            return hotel.hotel_id==hotel_id
+        }
+    )
+     console.log(hotel_to_be_deleted_index);
+  // displayHotels(hotels);
+  hotels.splice(hotel_to_be_deleted_index,1);
+  displayHotels(hotels);
+  $("#delete_confirmation_modal").modal("hide");
+  }
+  
 }
  
 function showAddHotelForm(){
   clearForm();
+
   const add_hotel_modal_label_element=document.getElementById("add_hotel_modal_label");
   add_hotel_modal_label_element.innerHTML="Add Hotel";
 
@@ -125,4 +147,15 @@ function displayHotels(hotel_array){
        }
 
 
+}
+
+function onFilter(event){
+  console.log(event);
+  console.log("onFilter",event.target.value);
+  const filtered_hotels=hotels.filter(
+       function(hotel){
+       return hotel.hotel_name.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1;
+       }
+    )
+  displayHotels(filtered_hotels)
 }
