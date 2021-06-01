@@ -73,7 +73,25 @@ function onStudentEdit(roll_number) {
 }
 
 function onStudentDelete(roll_number) {
+	$("#delete_confirmation_modal").modal("show");
 	
+	const delete_confirmation_modal_element = document.getElementById("delete_confirmation_modal")
+	const delete_student_element = document.getElementById("delete_student");
+	
+	const modal_body_element = delete_confirmation_modal_element.querySelector(".modal-body");
+	modal_body_element.innerHTML = "Are you sure, you want to delete student with roll number = " + roll_number + " ?";  
+	
+	delete_student_element.onclick = function() {
+		const student_to_be_deleted_index = students.findIndex(
+			function(student) {
+				return student.roll_no === roll_number;
+			}
+		)
+		console.log("student_to_be_deleted_index", student_to_be_deleted_index);
+		students.splice(student_to_be_deleted_index, 1);
+		displayStudents(students);
+		$("#delete_confirmation_modal").modal("hide");
+	}
 }
 
 function onAddStudent() {
@@ -199,3 +217,26 @@ function clearForm() {
 	form_element.district.value = "";
 	form_element.state.value = "";
 }
+
+
+function onAddressFilterChange(event) {
+	console.log("onAddressFilterChange ", event.target.value);
+	const filtered_students = students.filter(
+		function(student) {
+			return student.address.District.toLowerCase().indexOf(event.target.value.toLowerCase()) > -1;
+		}
+	)
+	displayStudents(filtered_students);
+}
+
+
+
+
+
+
+
+
+
+
+
+

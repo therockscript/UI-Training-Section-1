@@ -27,7 +27,7 @@ function onHotelEdit(hotel_id){
   clearForm();
   const hotel_updated=hotels.find(
       function(hotel){
-        return hotel.hotel_id=hotel_id;
+        return hotel.hotel_id===hotel_id;
       }
     );
    // console.log(hotel_updated);
@@ -55,7 +55,7 @@ function onHotelEdit(hotel_id){
 function update(hotel_id,update_hotel){
   const hotel_index=hotels.findIndex(
       function(hotel){
-        return hotel.hotel_id=hotel_id;
+        return hotel.hotel_id===hotel_id;
       }
     );
   hotels[hotel_index]=update_hotel;
@@ -66,20 +66,20 @@ function onHotelDelete(){
 
 }
  
-// function showAddHotelForm(){
-//   clearForm();
-//  const add_hotel_modal_label_element=document.getElementById("add_hotel_modal_label");
-//  add_hotel_modal_label_element.innerHTML="Add Hotel";
+function showAddHotelForm(){
+  clearForm();
+  const add_hotel_modal_label_element=document.getElementById("add_hotel_modal_label");
+  add_hotel_modal_label_element.innerHTML="Add Hotel";
 
-//  const add_update_element_button=document.getElementById("add_update_button");
-//  add_update_element_button.innerHTML="Add Hotel";
+  const add_update_element_button=document.getElementById("add_update_button");
+  add_update_element_button.innerHTML="Add Hotel";
 
-//  add_update_element_button.onclick=onAddHotel();
-
-//  const add_hotel_modal_element = document.getElementById("add_hotel_modal");
-//   const form_element = add_hotel_modal_element.querySelector("form");
-//   form_element.hotel_id.disabled = false;
-// } 
+  add_update_element_button.onclick=onAddHotel;
+ 
+  const add_hotel_modal_element = document.getElementById("add_hotel_modal");
+   const form_element = add_hotel_modal_element.querySelector("form");
+   form_element.hotel_id.disabled = false;
+} 
 
 function getHotelObjectFromForm(){
    const add_hotel_modal_element=document.getElementById("add_hotel_modal");
