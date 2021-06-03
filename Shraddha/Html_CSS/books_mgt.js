@@ -17,8 +17,8 @@ function onAddBook()
 		name: name,
 		author: author,
 		year: year,
-		publisher: publisher,
-		genre: genre
+		publisher: "",
+		genre: ""
 	}
 	add(new_book);
 	$('#add_book_modal').modal('hide')
@@ -28,7 +28,7 @@ function add(new_book) {
 	displayBooks(books);
 }
 
-   function onBookEdit(name) {
+function onBookEdit(name) {
   $('#add_book_modal').modal('show');
   clearForm();
   const book_to_be_updated = books.find(
@@ -36,7 +36,8 @@ function add(new_book) {
       return book.name === name;
     }
   );
-  const add_book_modal_element=document.getElementById("add_book_modal_modal");
+  console.log("book_to_be_updated ", book_to_be_updated);
+  const add_book_modal_element=document.getElementById("add_book_modal");
   const form_element=add_book_modal_element.querySelector("form");
 
   form_element.name.value=book_to_be_updated.name;
@@ -135,6 +136,7 @@ function displayBooks(book_array) {
 	
 	const book_table_element = document.getElementById("book_table");
 	const book_table_body_element = book_table_element.querySelector("tbody")
+	book_table_body_element.innerHTML = "";
 	for (let i=0; i<book_array.length; i++) {
 		let book_row = document.createElement("tr");
 		book_row.id = "book_" + book_array[i].name;
@@ -143,7 +145,7 @@ function displayBooks(book_array) {
 			<td>${book_array[i].name}</td>
 			<td>${book_array[i].author}</td>
 			<td>${book_array[i].year}</td>
-			<td><button id="edit_${book_array[i].name}" type="button" class="btn btn-info" onclick="onBookEdit(${book_array[i].name})">Edit</button>
+			<td><button id="edit_${book_array[i].name}" type="button" class="btn btn-info" onclick="onBookEdit('${book_array[i].name}')">Edit</button>
           <button id="delete_${book_array[i].name}" type="button" class="btn btn-Danger" onclick="onBookDelete(${book_array[i].name})">Delete</button>
           </td>`;
 				

@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	
+	<link rel="stylesheet" href="../../../bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="to_do_list.css">
+	
+	<script src="../../../jquery-3.2.1.slim.min.js" ></script>
+	<script src="../../../popper.min.js"></script>
+	<script src="../../../bootstrap.min.js"></script>
+	<script src="to_do_list.js"></script>
+</head>
+
+<body onload="onPageLoad()">
+	<div class="container mt-5">
+		<button type="button" class="btn btn-primary" onclick="onShowAddForm()">Add item</button>
+		
+		<div id="add_item_form_div" class="mt-3 p-4 border border-info">
+			<form onsubmit="onAddItemFormSubmit(event)">
+				<div class="form-group">
+					<label>Name</label>
+					<input type="text" required class="form-control" name="item_name"/>
+				</div>
+				<button type="submit" class="btn btn-primary">Add</button>
+				<button type="button" class="btn btn-secondary" onclick="onAddCancel()">Cancel</button>
+			</form>
+		</div>
+	</div>
+	
+	<div class="container mt-2">
+		<ul id="to_do_list" class="list-group">
+		</ul>
+	</div>
+</body>
+</html>
