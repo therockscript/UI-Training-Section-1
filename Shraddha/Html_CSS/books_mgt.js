@@ -76,14 +76,14 @@ function onBookDelete(name) {
 	const delete_book_element = document.getElementById("delete_student");
 	
 	const modal_body_element = delete_confirmation_modal_element.querySelector(".modal-body");
-	modal_body_element.innerHTML = "Are you sure, you want to delete" + name + "book ?";  
+	modal_body_element.innerHTML = "Are you sure, you want to delete"  +" "+ name +" "+ "book ?";  
 	
 	delete_book_element.onclick = function() {
 		const book_to_be_deleted_index = books.findIndex(
 			function(book) {
-				return book.name=== name;
+				return book.name === name;
 			}
-		)
+		);
 		
 		books.splice(book_to_be_deleted_index, 1);
 		displayBooks(books);
@@ -146,7 +146,7 @@ function displayBooks(book_array) {
 			<td>${book_array[i].author}</td>
 			<td>${book_array[i].year}</td>
 			<td><button id="edit_${book_array[i].name}" type="button" class="btn btn-info" onclick="onBookEdit('${book_array[i].name}')">Edit</button>
-          <button id="delete_${book_array[i].name}" type="button" class="btn btn-Danger" onclick="onBookDelete(${book_array[i].name})">Delete</button>
+          <button id="delete_${book_array[i].name}" type="button" class="btn btn-Danger" onclick="onBookDelete('${book_array[i].name}')">Delete</button>
           </td>`;
 				
 		book_table_body_element.appendChild(book_row);
