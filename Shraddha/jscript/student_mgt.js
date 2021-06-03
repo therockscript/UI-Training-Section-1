@@ -64,6 +64,10 @@ function displayStudents(student_array) {
 				${student_array[i].address.city},
 				${student_array[i].address.state},
 				${student_array[i].address.country}.
+			</td>
+			<td>
+				<button id="edit_${student_array[i].roll_no}" type="button" class="btn btn-primary"  onclick="onStudentEdit(${student_array[i].roll_no})">Edit</button>
+				<button id="delete_${student_array[i].roll_no}" type="button" class="btn btn-danger" onclick="onStudentDelete(${student_array[i].roll_no})">Delete</button>
 			</td>`;
 		student_table_body_element.appendChild(student_row);
 	}

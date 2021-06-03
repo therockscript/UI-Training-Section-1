@@ -1,0 +1,98 @@
+<html>
+<head>
+	<title>Books_Lib</title>
+	<script src="books.js"></script>
+	<script src="books_mgt.js"></script>
+	<link rel="stylesheet" href="../../bootstrap.css">
+	<script src="../../jquery-3.2.1.slim.min.js" ></script>
+	<script src="../../popper.min.js"></script>
+	<script src="../../bootstrap.min.js"></script>
+	<link rel="stylesheet" href="books_mgt.css">
+</head>
+
+<body onload="onPageLoad()" class="container">
+
+<button type="button" class="btn btn primary" data-toggle="modal" data-target="#add_book_modal">Add Book</button>
+	
+	
+		<table id="book_table" class="table table-striped">
+		<thead>
+		<tr>
+		 <th scope="col">Book Name
+		 <input type="text" class="form-control" placeholder="Search Book" onkeyup="onFilter(event)"/>
+          
+        </th>
+		  <th scope="col">Author</th>
+		  <th scope="col">Year</th>
+		</tr>
+	  </thead>
+	  <tbody>
+	  
+	  </tbody>
+	  </table>
+	 
+	  
+	<div class="modal fade" id="add_book_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	 <div class="modal-dialog" role="document">
+	  <div class="modal-content">
+	   <div class="modal-header">
+	     <h5 class="modal-title" id="exampleModalLabel">Add Book</h5>
+		     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+		<div class="modal-body">
+		 <form>
+		   <div class="row">
+				<div class="col-4">
+					<div class="form-group">
+						<label>Book Name</label>
+						<input type="text" class="form-control" name="name"/>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+						<label>Author</label>
+						<input type="text" class="form-control" name="author"/>
+			        </div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+						<label>Year</label>
+						<input type="number" class="form-control" name="year"/>
+			        </div>
+				</div>
+				
+		   </div>
+		 </form>
+	   </div>
+	 <div class="modal-footer">
+		<button type="button" class="btn btn secondary" data-dismiss="modal">Close</button>
+		<button type="button" class="btn btn primary" onclick="onAddBook()">Add Book</button>
+	 </div> 
+	</div>
+   </div>
+  </div>
+  
+  <!--delete modal-->
+<div class="modal fade" id="delete_confirmation_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+			<button id="delete_student" type="button" class="btn btn-primary">Delete</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</body>
+</html>
