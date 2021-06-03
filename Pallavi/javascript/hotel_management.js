@@ -3,6 +3,7 @@ function onPageLoad(){
 }
 
 function onAddHotel(){
+	debugger
     const add_hotel_modal_element = document.getElementById("add_hotel_modal");
 	const form_element = add_hotel_modal_element.querySelector("form");
 	const hotel_id = parseInt(form_element.hotel_id.value);
@@ -22,7 +23,7 @@ function onAddHotel(){
              no_of_room:no_of_rooms,
              rent:hotel_rent,
              hotel_type:hotel_type
-           }
+           },
 	}
 	add(new_hotel);
 	$('#add_hotel_modal').modal('hide')

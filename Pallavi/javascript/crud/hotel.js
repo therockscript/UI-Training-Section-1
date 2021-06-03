@@ -140,8 +140,7 @@ function displayHotels(hotel_array){
           <td>${hotel_array[i].hotel_name}</td>
           <td><button id="edit_${hotel_array[i].hotel_id}" type="button" class="btn btn-info" onclick="onHotelEdit(${hotel_array[i].hotel_id})">Edit</button>
           <button id="delete_${hotel_array[i].hotel_id}" type="button" class="btn btn-Danger" onclick="onHotelDelete(${hotel_array[i].hotel_id})">Delete</button>
-          </td>
-          `;
+          </td>`;
 
           hotel_table_body_element.appendChild(hotel_row);
        }
