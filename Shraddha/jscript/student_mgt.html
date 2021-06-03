@@ -20,7 +20,10 @@
 	  <thead>
 		<tr>
 		  <th scope="col">Roll Number</th>
-		  <th scope="col">Name</th>
+		  <th scope="col">
+		  <input type="text" class="form-control" placeholder="Search name" onkeyup="onNameFilter(event)"/>
+		  Name
+		  </th>
 		  <th scope="col">Age</th>
 		  <th scope="col">Address</th>
 		  <th scope="col">Action</th>
@@ -108,10 +111,32 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="onAddStudent()">Add Student</button>
+        <button id="add_update_button" type="button" class="btn btn-primary" onclick="onAddStudent()">Add Student</button>
       </div>
     </div>
   </div>
 </div>
+<!--delete modal-->
+<div class="modal fade" id="delete_confirmation_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Confirm</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+			<button id="delete_student" type="button" class="btn btn-primary">Delete</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</body>
+</html>
 </body>
 </html>

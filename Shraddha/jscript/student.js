@@ -7,7 +7,7 @@
 		address:
 		{
 		plot_no:11,
-		area:"Jail Road",
+		area:"Laxmi Nagar",
 		landmark:"Abhinav School",
 		city:"Nashik",
 		state:"Maharashtra",
