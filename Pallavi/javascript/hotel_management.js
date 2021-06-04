@@ -2,8 +2,11 @@ function onPageLoad(){
        display_hotels(hotels);
 }
 
-function onAddHotel(){
+function onAddHotel(event){
 	debugger
+	event.preventDefault();
+	event.stopPropagation();
+	
     const add_hotel_modal_element = document.getElementById("add_hotel_modal");
 	const form_element = add_hotel_modal_element.querySelector("form");
 	const hotel_id = parseInt(form_element.hotel_id.value);
