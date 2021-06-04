@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title>Hospital CRUD</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="../../../bootstrap.css">
+	<script src="../../../jquery-3.2.1.slim.min.js" ></script>
+	<script src="../../../popper.min.js"></script>
+	<script src="../../../bootstrap.min.js"></script>
+	<script src="hospital_mgmt.js"></script>
+	<script src="hospital.js"></script>
+	<link rel="stylesheet" type="text/css" href="../crud/delete_modal.css">
+</head>
+<body onload="onPageLoad()">
+	  <div class="container p-5">
+	  	<button type="button" class="btn btn-success" data-toggle="modal" data-target="#add_hospital_modal">ADD HOSPITAL</button>
+
+	   <div class="table-responsive p-3">             
+		  <table class="table table-striped" id="hospital_table">
+		    <thead>
+		      <tr>
+		        <th>Hospital Id</th>
+		        <th>Hospital Name
+                 <input type="text" class="form-control" Placeholder="Search Hospital" onkeyup="onFilterName(event)"/>
+		        </th>
+		        <th>Hospital Place
+                <input type="text" class="form-control" Placeholder="Search Place" onkeyup="onFilterPlace(event)"/>
+		        </th>
+		        <th>No of Beds</th>
+		        <th>Action</th>
+		      </tr>
+		    </thead>
+			    <tbody>
+			      
+		       </tbody>
+	  </table>
+	</div>
+	<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="add_hospital_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="hospital_modal_label">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</sph_idan>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form>
+            <div class="row">
+	          	<div class="col-6">
+		             <label>Hospital Id<span style="color:red">*</span></label>
+		               <input type="number" class="form-control" name="hosp_id" required/>
+	             </div>
+
+	             <div class="col-6">
+		             <label>Hospital Name<span style="color:red">*</span></label>
+		               <input type="text" class="form-control" name="hosp_name" required/>
+	             </div>
+             </div>	
+              <br>
+             <div class="row">
+	          	<div class="col-6">
+		             <label>Hospital Place<span style="color:red">*</span></label>
+		               <input type="text" class="form-control" name="hosp_place" required/>
+	             </div>
+
+	             <div class="col-6">
+		             <label>Number of Beds<span style="color:red">*</span></label>
+		               <input type="text" class="form-control" name="number_of_beds" required/>
+	             </div>
+             </div>	
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" onclick="onAddHospital()">Add Hospital</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="delete_confirmation_modal" class="modal fade">
+  <div class="modal-dialog modal-confirm">
+    <div class="modal-content">
+      <div class="modal-header flex-column">
+        <div class="icon-box">
+          <i class="material-icons">&#xE5CD;</i>
+        </div>            
+        <h4 class="modal-title w-100">Are you sure?</h4>  
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- <p>Do you really want to delete this record? This process cannot be undone.</p> -->
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" id="delete_hospital" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div> 
+    </div>	
+</body>
+</html>
