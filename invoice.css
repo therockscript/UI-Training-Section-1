@@ -1,0 +1,28 @@
+.card{
+	margin-top: 10px;
+    margin-left: 20%;
+    margin-right:20%;
+}
+.invoice{
+	float: right;
+	font-size: 20px;
+	color: green;
+}
+.data{
+	float: right
+}
+
+.invoice_head{
+	margin-top: 80px
+}
+.que{
+	float: right;
+}
+
+.invoice_footer{
+	float: right;
+}
+
+button{
+	float: right
+}
