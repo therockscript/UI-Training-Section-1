@@ -158,3 +158,6 @@ function onFilter(event){
     )
   displayHotels(filtered_hotels)
 }
+
+
+      

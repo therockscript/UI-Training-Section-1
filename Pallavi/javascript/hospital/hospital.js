@@ -6,7 +6,7 @@ function onPageLoad(){
 function onAddHospital(){
   const hospital_modal_element=document.getElementById("add_hospital_modal");
   const form_element=hospital_modal_element.querySelector("form");
-debugger
+//debugger
   const hospital_id=parseInt(form_element.hosp_id.value);
 // console.log(hospital_id)
   const hospital_name=form_element.hosp_name.value;
@@ -29,6 +29,82 @@ function add(new_hospital){
 	//console.log(hospitals)
 }
 
+function onHospitalEdit(hospital_id){
+  $('#add_hospital_modal').modal('show');
+  const hospital_to_be_deleted=hospitals.find(
+        function(hospital){
+          return hospital.hospital_id===hospital_id;
+        }
+    )
+
+  const hospital_modal_element=document.getElementById("add_hospital_modal");
+  const form_element=hospital_modal_element.querySelector("form");
+
+  form_element.hosp_id.value=hospital_to_be_deleted.hospital_id;
+  form_element.hosp_name.value=hospital_to_be_deleted.hospital_name;
+  form_element.hosp_place.value=hospital_to_be_deleted.hospital_place;
+  form_element.number_of_beds.value=hospital_to_be_deleted.no_of_beds;
+
+  form_element.hosp_id.disabled=true;
+
+  const add_hospital_modal_label=document.getElementById("hospital_modal_label");
+  add_hospital_modal_label.innerHTML="Update Hospital";
+
+  const add_hospital_update_button=document.getElementById("add_update_button");
+  add_hospital_update_button.innerHTML="Update Hospital";
+
+  add_hospital_update_button.onclick=function(){
+    const update_hospital=getHospitalObject();
+    update(hospital_id,update_hospital);
+    $('#add_hospital_modal').modal('hide')
+  }
+
+  function update(hospital_id,update_hospital){
+    const updated_hospital=hospitals.findIndex(
+        function(hospital){
+          return hospital.hospital_id==hospital_id
+        }
+      );
+    hospitals[updated_hospital]=update_hospital;
+    onDiplayHospital(hospitals);
+  }
+}
+
+function showAddHospitalForm(){
+  clearForm();
+
+  const add_hospital_modal_label_element=document.getElementById("hospital_modal_label");
+  add_hospital_modal_label_element.innerHTML="Add Hospital";
+
+  const add_update_element_button=document.getElementById("add_update_button");
+  add_update_element_button.innerHTML="Add Hospital";
+
+  add_update_element_button.onclick=onAddHospital;
+ 
+  const add_hospital_modal_element = document.getElementById("add_hospital_modal");
+   const form_element = add_hospital_modal_element.querySelector("form");
+   form_element.hosp_id.disabled = false;
+} 
+
+function getHospitalObject()
+{
+   const hospital_modal_element=document.getElementById("add_hospital_modal");
+  const form_element=hospital_modal_element.querySelector("form");
+//debugger
+  const hospital_id=parseInt(form_element.hosp_id.value);
+// console.log(hospital_id)
+  const hospital_name=form_element.hosp_name.value;
+  const hospital_place=form_element.hosp_place.value;
+  const no_of_beds=parseInt(form_element.number_of_beds.value);
+
+   const new_hospital={
+    hospital_id : hospital_id,
+    hospital_name : hospital_name,
+    hospital_place : hospital_place,
+    no_of_beds : no_of_beds
+   }
+   return new_hospital;
+}
 function onHospitalDelete(hosp_id){
   $('#delete_confirmation_modal').modal('show');
 
@@ -48,6 +124,16 @@ function onHospitalDelete(hosp_id){
       onDiplayHospital(hospitals)
       $('#delete_confirmation_modal').modal('hide')
   }
+}
+
+function clearForm() {
+  const add_hospital_modal_element = document.getElementById("add_hospital_modal");
+  const form_element = add_hospital_modal_element.querySelector("form");
+  
+  form_element.hosp_id.value = "";
+  form_element.hosp_name.value = "";
+  form_element.hosp_place.value = "";
+  form_element.number_of_beds.value = "";
 }
 
 function onFilterPlace(event){

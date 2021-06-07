@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="hotel_management.js"></script>
 	<script src="hotel.js"></script>
 	<link rel="stylesheet" href="bootstrap.css">
@@ -101,5 +102,25 @@
   </div>
 </div>     
 </div>
+<script>
+       $("#add_update_button").click(function(){
+        swal({
+              title: "Hotel Added Successfully!",
+              text: "Click ok button!",
+              icon: "success",
+            });
+       })
+</script>
+
+<script>
+ $("#delete_hotel").click(function(){
+        swal({
+              title: "Hotel Deleted Successfully!",
+              text: "Click ok button!",
+              icon: "success",
+            });
+       })
+</script>
+
 </body>
 </html>

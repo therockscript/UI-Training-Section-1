@@ -42,6 +42,7 @@ function display_hotels(hotel_array){
     //alert(hotel_array.length);
     const hotel_table_element = document.getElementById("hotel_table");
 	const hotel_table_body_element = hotel_table_element.querySelector("tbody")
+	hotel_table_body_element.innerHTML="";
 	for (let i=0; i<hotel_array.length; i++) {
 		let hotel_row = document.createElement("tr");
 		hotel_row.id = "hotel_" + hotel_array[i].hotel_id;
